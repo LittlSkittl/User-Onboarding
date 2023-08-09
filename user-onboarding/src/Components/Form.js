@@ -6,7 +6,7 @@ const Form = (props) => {
   const { firstName, lastName, email, password, tos } = props.values
 
   const onChange = evt => {
-    const { name, value, checked, type} = evt.target
+    const { name, value, checked, type } = evt.target
     const typeToUse = type === 'checkbox' ? checked : value
     change(name, typeToUse)
   }
@@ -17,23 +17,23 @@ const Form = (props) => {
   }
 
   return (
-    <div>
+    <div className='form-container'>
       <form onSubmit={onSubmit}>
         <p>{errors.firstName}</p>
         <p>{errors.lastName}</p>
         <p>{errors.password}</p>
         <p>{errors.email}</p>
         <p>{errors.tos}</p>
-        <label>First Name
+        <label className='text-inputs'>First Name
           <input
             type="text"
             name="firstName"
             onChange={onChange}
             value={firstName}
           />
-        </label>
+        </label >
         <br/>
-        <label>Last Name
+        <label className='text-inputs'>Last Name
           <input
             type="text"
             name="lastName"
@@ -42,7 +42,7 @@ const Form = (props) => {
           />  
         </label>
         <br/>
-        <label>Email
+        <label className='text-inputs'>Email
           <input
             type="email"
             name="email"
@@ -51,7 +51,7 @@ const Form = (props) => {
           />  
         </label>
         <br/>
-        <label>Password
+        <label className='text-inputs'>Password
           <input
             type="password"
             name="password"
@@ -60,7 +60,7 @@ const Form = (props) => {
           />  
         </label>
         <br/>
-        <label>Terms of Service
+        <label className='tos'>Terms of Service
           <input
             type="checkbox"
             name="tos"
@@ -69,7 +69,7 @@ const Form = (props) => {
           />  
         </label>
         <br/>
-        <input type='submit' value='create a new friend'/>
+        <input className='submit' type='submit' value='create a new friend'/>
       </form>
     </div>
   )

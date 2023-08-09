@@ -1,10 +1,13 @@
 
 import './App.css';
-import Form from './Components/Form';
 import { useState } from 'react';
 import axios from 'axios';
 import * as yup from 'yup'
+
+
 import Schema from './validation/FormSchema';
+import Form from './Components/Form';
+import Friend from './Components/Friend';
 
 const initialFormValues = {
   firstName: '',
@@ -63,17 +66,15 @@ function App() {
         errors={formErrors}
         submit={handleSubmit}
       />
+      <div className='container'>
       {
         users.map(user => {
           return (
-            <div key={user.id}>
-              <p>{user.firstName}</p>
-              <p>{user.lastName}</p>
-              <p>{user.email}</p>
-            </div>
+            <Friend user={user}/>
           )
         })
       }
+      </div>
     </div>
   );
 }

@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 2px 2px 20px 2px gray;
+  border-radius: 10px;
+  padding: 2rem;
+  color: black;
+}
+
+.tos {
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  border: none;
+  box-shadow: 2px 2px 2px 2px gray;
+  background: white;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  border-radius: 10px;  
+}
+
+.submit:hover {
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.text-inputs {
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+}
